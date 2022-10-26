@@ -1,4 +1,4 @@
-package com.blz.firstday;
+package com.blz.first.review;
 	public class PrintSecondLasrgestNumberFromArray {
     public static void main(String[] args) {
         int[] a = {20,30,50,60};
