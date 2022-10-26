@@ -1,17 +1,47 @@
-package com.blz.first.review;
-	public class PrintSecondLasrgestNumberFromArray {
-    public static void main(String[] args) {
-        int[] a = {20,30,50,60};
-        int temp;
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[i] < a[j]) {
-                    temp = a[i];
-                    a[i] = a[j];
-                    a[j] = temp;
-                }
-            }
-        }
-        System.out.println("minimum element from array: " + a[1]);
-    }
-}
+package com.blz.firstday;
+class PrintSecondLasrgestNumberFromArray{
+	 
+	// Function to print the second largest elements
+	static void print2largest(int arr[], int arr_size)
+	{
+	    int i, first, second;
+	 
+	    // There should be atleast two elements
+	    if (arr_size < 2)
+	    {
+	        System.out.printf(" Invalid Input ");
+	        return;
+	    }
+	 
+	    int largest = second = Integer.MIN_VALUE;
+	 
+	    // Find the largest element
+	    for(i = 0; i < arr_size; i++)
+	    {
+	        largest = Math.max(largest, arr[i]);
+	    }
+	 
+	    // Finding the second largest element
+	    for(i = 0; i < arr_size; i++)
+	    {
+	        if (arr[i] != largest)
+	            second = Math.max(second, arr[i]);
+	    }
+	    if (second == Integer.MIN_VALUE)
+	        System.out.printf("There is no second " +
+	                          "largest element\n");
+	    else
+	        System.out.printf("The second largest " +
+	                          "element is %d\n", second);
+	}
+	 
+	// main method
+	public static void main(String[] args)
+	{
+	    int arr[] = { 12, 35, 1, 10, 34, 1 };
+	    int n = arr.length;
+	     
+	    print2largest(arr, n);
+	}
+	}
+	 
