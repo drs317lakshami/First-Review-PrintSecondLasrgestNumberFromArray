@@ -6,7 +6,7 @@ class PrintSecondLasrgestNumberFromArray{
 	{
 	    int i, first, second;
 	 
-	    // There should be atleast two elements
+	    // There should be atleast two elementss
 	    if (arr_size < 2)
 	    {
 	        System.out.printf(" Invalid Input ");
