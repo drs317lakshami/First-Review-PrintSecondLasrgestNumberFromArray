@@ -14,6 +14,6 @@ class PrintSecondLasrgestNumberFromArray{
                     }
                 }
             }
-            System.out.println("minimum element from array: " + a[1]);
+            System.out.println("minimum element from arrays: " + a[1]);
         }
     }
